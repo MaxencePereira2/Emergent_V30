@@ -1080,6 +1080,7 @@ body::before {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin-top: 3rem;
+    align-items: start; /* Align to top */
 }
 
 /* Sous-sections de tarifs */
@@ -1092,6 +1093,7 @@ body::before {
     display: flex;
     flex-direction: column;
     min-width: 0; /* Allow grid items to shrink below content size */
+    height: 100%; /* Full height */
 }
 
 .pricing-subsection:last-child {
