@@ -1110,6 +1110,7 @@ body::before {
     letter-spacing: 0.03em;
     position: relative;
     line-height: 1.3;
+    min-height: 2.6em; /* Fixed minimum height for 2 lines */
 }
 
 .subsection-title::after {
