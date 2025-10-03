@@ -1078,19 +1078,20 @@ body::before {
 .pricing-subsections-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
     margin-top: 3rem;
 }
 
 /* Sous-sections de tarifs */
 .pricing-subsection {
     margin-bottom: 0;
-    padding: 2rem;
+    padding: 1.5rem;
     border: 1px solid rgba(204, 139, 101, 0.2);
     border-radius: 16px;
     background: rgba(248, 249, 250, 0.3);
     display: flex;
     flex-direction: column;
+    min-width: 0; /* Allow grid items to shrink below content size */
 }
 
 .pricing-subsection:last-child {
