@@ -1078,19 +1078,20 @@ body::before {
 .pricing-subsections-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
     margin-top: 3rem;
 }
 
 /* Sous-sections de tarifs */
 .pricing-subsection {
     margin-bottom: 0;
-    padding: 2rem;
+    padding: 1.5rem;
     border: 1px solid rgba(204, 139, 101, 0.2);
     border-radius: 16px;
     background: rgba(248, 249, 250, 0.3);
     display: flex;
     flex-direction: column;
+    min-width: 0; /* Allow grid items to shrink below content size */
 }
 
 .pricing-subsection:last-child {
@@ -1098,14 +1099,15 @@ body::before {
 }
 
 .subsection-title {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: var(--copper);
     text-align: center;
-    margin: 0 0 1rem 0;
+    margin: 0 0 0.8rem 0;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
     position: relative;
+    line-height: 1.3;
 }
 
 .subsection-title::after {
@@ -1121,28 +1123,25 @@ body::before {
 
 .subsection-intro {
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--text);
     opacity: 0.8;
-    max-width: 800px;
-    margin: 0 auto 2rem auto;
-    line-height: 1.6;
+    margin: 0 auto 1.5rem auto;
+    line-height: 1.5;
 }
 
 /* Grille des cartes tarifs - style premium */
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
+    grid-template-columns: 1fr;
+    gap: 1rem;
     margin: 0 auto;
 }
 
 /* Centrer une carte unique dans la grille */
 .pricing-grid .pricing-card:only-child {
-    max-width: 450px;
     margin: 0 auto;
-    grid-column: 1 / -1;
+    width: 100%;
 }
 
 /* Carte tarif - design haut de gamme gracz.fr */
