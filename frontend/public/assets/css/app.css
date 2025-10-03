@@ -1092,7 +1092,7 @@ body::before {
     font-weight: 600;
     color: var(--copper);
     text-align: center;
-    margin: 0 0 2rem 0;
+    margin: 0 0 1rem 0;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     position: relative;
@@ -1107,6 +1107,16 @@ body::before {
     width: 60px;
     height: 2px;
     background: linear-gradient(90deg, var(--copper), var(--warm-beige));
+}
+
+.subsection-intro {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--text);
+    opacity: 0.8;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.6;
 }
 
 /* Grille des cartes tarifs - style premium */
