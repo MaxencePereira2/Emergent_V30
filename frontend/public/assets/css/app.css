@@ -1080,6 +1080,7 @@ body::before {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin-top: 3rem;
+    align-items: start; /* Align to top */
 }
 
 /* Sous-sections de tarifs */
@@ -1092,6 +1093,7 @@ body::before {
     display: flex;
     flex-direction: column;
     min-width: 0; /* Allow grid items to shrink below content size */
+    height: 100%; /* Full height */
 }
 
 .pricing-subsection:last-child {
@@ -1108,6 +1110,7 @@ body::before {
     letter-spacing: 0.03em;
     position: relative;
     line-height: 1.3;
+    min-height: 2.6em; /* Fixed minimum height for 2 lines */
 }
 
 .subsection-title::after {
@@ -1128,6 +1131,7 @@ body::before {
     opacity: 0.8;
     margin: 0 auto 1.5rem auto;
     line-height: 1.5;
+    min-height: 4.5em; /* Fixed minimum height for alignment (3 lines) */
 }
 
 /* Grille des cartes tarifs - style premium */
@@ -1157,6 +1161,7 @@ body::before {
     display: flex;
     flex-direction: column;
     height: 100%;
+    min-height: 400px; /* Minimum height for consistency */
 }
 
 .pricing-card::before {
