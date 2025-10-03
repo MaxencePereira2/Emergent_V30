@@ -1130,6 +1130,7 @@ body::before {
     opacity: 0.8;
     margin: 0 auto 1.5rem auto;
     line-height: 1.5;
+    min-height: 4.5em; /* Fixed minimum height for alignment (3 lines) */
 }
 
 /* Grille des cartes tarifs - style premium */
