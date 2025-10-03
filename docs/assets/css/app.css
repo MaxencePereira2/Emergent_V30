@@ -1123,12 +1123,11 @@ body::before {
 
 .subsection-intro {
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--text);
     opacity: 0.8;
-    max-width: 800px;
-    margin: 0 auto 2rem auto;
-    line-height: 1.6;
+    margin: 0 auto 1.5rem auto;
+    line-height: 1.5;
 }
 
 /* Grille des cartes tarifs - style premium */
