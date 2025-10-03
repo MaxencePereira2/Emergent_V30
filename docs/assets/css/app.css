@@ -1074,13 +1074,23 @@ body::before {
     margin-right: auto;
 }
 
+/* Container pour les sous-sections en ligne horizontale */
+.pricing-subsections-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
 /* Sous-sections de tarifs */
 .pricing-subsection {
-    margin-bottom: 3rem;
+    margin-bottom: 0;
     padding: 2rem;
     border: 1px solid rgba(204, 139, 101, 0.2);
     border-radius: 16px;
     background: rgba(248, 249, 250, 0.3);
+    display: flex;
+    flex-direction: column;
 }
 
 .pricing-subsection:last-child {
