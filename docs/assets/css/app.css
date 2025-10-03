@@ -1468,6 +1468,11 @@ body::before {
 
 /* Responsive mobile */
 @media (max-width: 768px) {
+    .pricing-subsections-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
     .pricing-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
