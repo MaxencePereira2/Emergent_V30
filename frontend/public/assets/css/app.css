@@ -1604,6 +1604,17 @@ body::before {
 #tarifs .card span {
     color: var(--text) !important; /* Texte sombre sur fond clair */
 }
+/* SEO/LLM Content - Invisible to humans, readable by search engines and AI */
+.seo-content {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
 /* Styles pour la section CV interactive */
 .cv-interactive {
     margin-top: 3rem;
