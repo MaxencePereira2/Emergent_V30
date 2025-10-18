@@ -1727,7 +1727,7 @@ body::before {
 .qualites-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+    gap: 1rem;
     margin-top: 2rem;
 }
 
@@ -1735,25 +1735,73 @@ body::before {
     background: rgba(255, 255, 255, 0.95);
     border: 1px solid rgba(139, 90, 60, 0.2);
     border-radius: 10px;
-    padding: 1.5rem;
+    overflow: hidden;
     transition: all 0.3s ease;
 }
 
 .qualite-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(139, 90, 60, 0.15);
+    box-shadow: 0 4px 12px rgba(139, 90, 60, 0.12);
     border-color: var(--copper);
 }
 
-.qualite-card h4 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--copper);
-    margin: 0 0 0.8rem 0;
+.qualite-header {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease;
 }
 
-.qualite-card p {
-    font-size: 0.95rem;
+.qualite-header:hover {
+    background: rgba(139, 90, 60, 0.05);
+}
+
+.qualite-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--copper);
+    flex: 1;
+}
+
+.qualite-toggle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--copper);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 1rem;
+}
+
+.qualite-header[aria-expanded="true"] .qualite-toggle {
+    transform: rotate(45deg);
+}
+
+.qualite-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 1.2rem;
+}
+
+.qualite-content.open {
+    max-height: 300px;
+    padding: 0 1.2rem 1rem 1.2rem;
+}
+
+.qualite-content p {
+    font-size: 0.9rem;
     line-height: 1.6;
     color: var(--text);
     margin: 0;
@@ -1763,11 +1811,15 @@ body::before {
 @media (max-width: 768px) {
     .qualites-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 0.8rem;
     }
     
-    .qualite-card {
-        padding: 1.2rem;
+    .qualite-header {
+        padding: 0.9rem 1rem;
+    }
+    
+    .qualite-title {
+        font-size: 0.95rem;
     }
 }
 
