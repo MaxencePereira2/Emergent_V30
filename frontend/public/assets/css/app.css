@@ -1074,6 +1074,57 @@ body::before {
     margin-right: auto;
 }
 
+/* Domaines d'intervention - Section Projets */
+.domaines-intervention {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 2rem auto 3rem auto;
+    max-width: 900px;
+}
+
+.domaine-card {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(139, 90, 60, 0.25);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.domaine-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 90, 60, 0.15);
+    border-color: var(--copper);
+}
+
+.domaine-card span {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--copper);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+    .domaines-intervention {
+        flex-wrap: wrap;
+        gap: 1rem;
+        max-width: 100%;
+    }
+    
+    .domaine-card {
+        flex: 0 0 calc(50% - 0.5rem);
+        padding: 0.8rem 1rem;
+    }
+    
+    .domaine-card span {
+        font-size: 0.85rem;
+    }
+}
+
 /* Section Moyens de Production */
 #moyens-production {
     background: 
