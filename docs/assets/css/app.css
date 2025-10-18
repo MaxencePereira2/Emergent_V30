@@ -1710,6 +1710,67 @@ body::before {
     white-space: nowrap;
 }
 
+/* Section Savoir-faire & Savoir-être */
+.savoir-faire-section {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.section-subtitle {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--copper);
+    text-align: center;
+    margin: 0 0 2rem 0;
+}
+
+.qualites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.qualite-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(139, 90, 60, 0.2);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.qualite-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(139, 90, 60, 0.15);
+    border-color: var(--copper);
+}
+
+.qualite-card h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--copper);
+    margin: 0 0 0.8rem 0;
+}
+
+.qualite-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text);
+    margin: 0;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .qualites-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .qualite-card {
+        padding: 1.2rem;
+    }
+}
+
 /* Styles pour la section CV interactive */
 .cv-interactive {
     margin-top: 3rem;
