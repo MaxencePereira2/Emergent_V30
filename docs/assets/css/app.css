@@ -186,7 +186,7 @@ body::before {
 .hero {
     padding: 80px 20px 60px;
     margin-top: 70px; /* Compensation pour le header fixe */
-    background: var(--deep-green);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.65) 100%);
     text-align: center;
     position: relative;
     overflow: hidden;
