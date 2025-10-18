@@ -1108,9 +1108,12 @@ body::before {
 }
 
 .production-icon {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     line-height: 1;
+    color: #2d3748;
+    font-weight: 700;
+    opacity: 0.85;
 }
 
 .production-card h3 {
