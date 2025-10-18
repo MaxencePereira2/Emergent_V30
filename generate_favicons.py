@@ -21,7 +21,6 @@ if logo.mode != 'RGBA':
 
 # 1. Créer favicon.ico (multi-résolutions: 16x16, 32x32, 48x48)
 print("\n🎨 Création du favicon.ico...")
-favicon_sizes = [(16, 16), (32, 32), 48, 48)]
 favicon_images = []
 for size in [16, 32, 48]:
     resized = logo.resize((size, size), Image.Resampling.LANCZOS)
