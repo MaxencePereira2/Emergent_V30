@@ -1072,4 +1072,21 @@
             img.style.transition = 'opacity 0.3s ease';
         });
     });
+
+    // Gestion des cartes qualités cliquables (section "Ce qui me définit")
+    document.addEventListener('DOMContentLoaded', () => {
+        const qualiteHeaders = document.querySelectorAll('.qualite-header');
+        
+        qualiteHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const isExpanded = header.getAttribute('aria-expanded') === 'true';
+                
+                // Toggle état
+                header.setAttribute('aria-expanded', !isExpanded);
+                content.setAttribute('aria-hidden', isExpanded);
+                content.classList.toggle('open');
+            });
+        });
+    });
 })();
